@@ -26,7 +26,7 @@ function count_function(args) {
       result.push(splitted_msg[i]);
     }
     return {
-        result: result
+        Counts: result
         }
 }
 
