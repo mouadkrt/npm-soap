@@ -1,6 +1,12 @@
 {
+  "name": "nodejs-soap-example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
   "dependencies": {
     "soap": "^0.45.0",
 	"express": "^4.15.2"
-  }
+  },
+  "author": "Sentissi Mouad"
 }
