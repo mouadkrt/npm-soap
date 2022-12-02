@@ -33,7 +33,7 @@ function count_function(args) {
 // the service
 var serviceObject = {
   MessageSplitterService: {
-        MessageSplitterServiceSoap12Port: {
+        MessageSplitterServiceSoapPort: {
           MessageSplitter: splitter_function,
           MessageCounter: count_function
         }
