@@ -1,0 +1,6 @@
+cd C:\Users\msentissi\Documents\LABS\3scale\node-soap-example
+code .
+
+npm install
+npm start
+node client.js (Or send request through POSTMAN/SOAPUI)
