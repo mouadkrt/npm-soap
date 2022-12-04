@@ -49,7 +49,18 @@ var serviceObject = {
   app.listen(8001, function(){
       //Note: /wsdl route will be handled by soap module
       //and all other routes & middleware will continue to work
-      soap.listen(app, '/wsdl', serviceObject, xml, function(){
+
+      soapServer = soap.listen(app, '/wsdl', serviceObject, xml, function(){
         console.log('server initialized on 8001');
       });
+
+      soapServer.authenticate = function(security) {
+        //console.log(security);
+        return true;
+        var created, nonce, password, user, token;
+        token = security.UsernameToken, user = token.Username,
+                password = token.Password, nonce = token.Nonce, created = token.Created;
+        return user === 'user' && password === soap.passwordDigest(nonce, created, 'password');
+      };
+
   });
