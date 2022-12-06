@@ -4,7 +4,7 @@ var soap = require('soap');
 
 // the splitter function, used by the service
 function splitter_function(args) {
-    console.log('splitter_function');
+    console.log('splitter_function1111');
     var splitter = args.splitter;
     var splitted_msg = args.message.split(splitter);
     var result = [];
@@ -18,7 +18,7 @@ function splitter_function(args) {
 
 // the count function, used by the service
 function count_function(args) {
-    console.log('count_function');
+    console.log('count_function2222');
     var splitter = args.splitter;
     var splitted_msg = args.message.split(splitter);
     var result = [];
